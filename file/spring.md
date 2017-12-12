@@ -1,4 +1,12 @@
-## 创建一个Spring项目
+
+
+<!-- vim-markdown-toc GFM -->
+
+* [创建一个Spring项目](#创建一个spring项目)
+
+<!-- vim-markdown-toc -->
+
+### 创建一个Spring项目
 
 1. 首先创建一个项目仓库（SpringDemo）
 ```

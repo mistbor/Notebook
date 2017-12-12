@@ -1,6 +1,14 @@
-## How to use git in Linux?
 
-**在同一台电脑上配置多个git账户**
+
+
+ How to use git in Linux?
+<!-- vim-markdown-toc GFM -->
+
+* [在同一台电脑上配置多个git账户](#在同一台电脑上配置多个git账户)
+
+<!-- vim-markdown-toc -->
+
+###在同一台电脑上配置多个git账户
 
 1.首先在~/.ssh目录下执行
 

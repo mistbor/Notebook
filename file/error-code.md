@@ -1,8 +1,14 @@
-# error code
+error code
+(记录遇到的错误码)
 
-**记录遇到的错误码**
 
-## 502 Bad Gateway
+<!-- vim-markdown-toc GFM -->
+
+* [502 Bad Gateway](#502-bad-gateway)
+
+<!-- vim-markdown-toc -->
+
+### 502 Bad Gateway
 
 **情况描述**
 项目发布时使用同事编写的脚本进行release发布到服务器，由于项目配置文件中端口号一直是8084,(某个地方配置了项目发布到外网的端口一定是8084，具体未知)，然后由于本地有个服务占用了8084，所以把该项目端口换成了8083，发布到服务器后就报错502 Bad Gateway.

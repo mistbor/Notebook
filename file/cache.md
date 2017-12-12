@@ -1,6 +1,14 @@
-# cache
+cache
+(缓存相关)
 
-## 刷新
+
+<!-- vim-markdown-toc GFM -->
+
+* [刷新](#刷新)
+
+<!-- vim-markdown-toc -->
+
+### 刷新
 
 1.基本刷新
 
