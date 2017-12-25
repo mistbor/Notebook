@@ -5,6 +5,7 @@
 <!-- vim-markdown-toc GFM -->
 
 * [在同一台电脑上配置多个git账户](#在同一台电脑上配置多个git账户)
+* [修改之前某次commit日志和内容](#修改之前某次commit日志和内容)
 
 <!-- vim-markdown-toc -->
 
@@ -38,3 +39,30 @@ git config user.email zhangsan@qq.com
 
 另外，同一台设备上可以生成多个SSH，也就是说以上操作可重复执行多次。
 
+
+### 修改之前某次commit日志和内容
+
+**比如之前已经提交了五个patch，但是需要修改第三个。**
+
+```
+第一步： 将修改的内容stash起来
+git stash
+第二步： 查看第三次修改，即倒数第三次
+git rebase -i HEAD~3
+
+git rebase -i master~1 #最后一次
+git rebase -i master~5 #最后五次
+git rebase -i HEAD~5   #当前版本的倒数第三次状态
+git rebase -i 47893off #指定的SHA位置
+
+第三步： 将pick修改为edit，并保存退出
+第四步： 将你stash起来的需要推到这个patch里面的内容释放出来
+git stash pop {0}
+
+第五步： 正常的add, commit即可
+第六步： git rebase --continue
+最后  ： git push <remote> <branch> -f  （如果还没有推到远端，不用处理）
+
+
+
+```
