@@ -5,6 +5,9 @@
 * [java并发基础](#java并发基础)
 * [线程安全的HashMap](#线程安全的hashmap)
 * [ConcurrentHashMap原理](#concurrenthashmap原理)
+* [happen-before规则](#happen-before规则)
+* [synchronized 关键字](#synchronized-关键字)
+* [Enum 关键字](#enum-关键字)
 
 <!-- vim-markdown-toc -->
 
@@ -209,3 +212,37 @@ ConcurrentHashMap提供的putIfAbsent(key, value)方法原子性的实现了同�
 7. ConcurrentHashMap不允许null的键值；
 8. 可以使用ConcurrentHashMap代替HashMap，但ConcurrentHashMap不会锁住整个Map
 ```
+
+
+### happen-before规则
+
+```
+Java语言中有一个“先行发生”(happen-before)的规则，它是Java内存模型中定义的两项操作之间的偏序关系。
+如果操作A先行于操作B，即，在发生操作B之前，操作A产生的影响都能被操作B观察到，“影响”包括：
+
+修改了内存中共享变量的值、发送了消息、调用了方法等，它与时间上的先后发生基本没有太大的关系。
+
+
+```
+
+
+### synchronized 关键字
+
+1. synchronized作用
+```
+概括来说其作用是：线程同步。他可以用来修改对象中的方法，将对象加锁。
+相当于每个线程运行到这个方法时，都要检查有没有其他正在用这个方法的线程，有的话要等正在使用这个方法的线程运行完这个方法后再运行。
+```
+
+2. 用法：synchronized方法和synchronized块
+```
+1.synchronized方法
+
+public synchronized void test();
+
+synchronized方法控制对类成员变量的访问：每个类实例对应一把锁，每个synchronized方法都必须获得调用该方法的类实例的锁才能执行，否则
+```
+
+### Enum 关键字
+
+![](../pic/java/Enum.png)
