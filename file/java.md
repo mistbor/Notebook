@@ -8,6 +8,7 @@
 * [happen-before规则](#happen-before规则)
 * [synchronized 关键字](#synchronized-关键字)
 * [Enum 关键字](#enum-关键字)
+* [thread join方法](#thread-join方法)
 
 <!-- vim-markdown-toc -->
 
@@ -246,3 +247,7 @@ synchronized方法控制对类成员变量的访问：每个类实例对应一�
 ### Enum 关键字
 
 ![](../pic/java/Enum.png)
+
+### thread join方法
+
+![](../pic/java/thread_join.png)
